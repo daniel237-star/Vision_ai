@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vision Digital | Solutions digitales</title>
+
+<meta name="description" content="Vision Digital accompagne les entrepreneurs, PME et organisations dans leur transformation digitale.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7, 17, 31, 0.96);
+    border-bottom: 1px solid #1d3148;
+}
+
+.navbar {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00d9ff;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #d7e5f2;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #00d9ff;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    padding: 90px 0;
+    background: linear-gradient(135deg, #07111f, #0b1d32);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #00d9ff;
+    border-radius: 30px;
+    color: #00d9ff;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #00d9ff;
+}
+
+.hero p {
+    color: #b8c8d8;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 23px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #00bfff;
+    color: #00131d;
+}
+
+.btn-secondary {
+    border: 1px solid #38536d;
+    color: #ffffff;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* HERO VISUAL */
+
+.dashboard {
+    background: #0c1c2f;
+    border: 1px solid #27415b;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.dashboard-top {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00d9ff;
+}
+
+.dashboard h3 {
+    margin-bottom: 20px;
+}
+
+.chart {
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.bar {
+    flex: 1;
+    background: #00bfff;
+    border-radius: 5px 5px 0 0;
+}
+
+.bar1 { height: 35%; }
+.bar2 { height: 55%; }
+.bar3 { height: 45%; }
+.bar4 { height: 70%; }
+.bar5 { height: 65%; }
+.bar6 { height: 90%; }
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 85px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #9db0c2;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    background: #091522;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: #0d2034;
+    border: 1px solid #1d3b55;
+    border-radius: 15px;
+    padding: 28px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #00d9ff;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #9fb2c5;
+    font-size: 15px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-box {
+    background: #0d2034;
+    border: 1px solid #1e3a52;
+    border-radius: 18px;
+    padding: 35px;
+}
+
+.about-box h3 {
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #b4c4d2;
+    margin-bottom: 18px;
+}
+
+/* ================= STATS ================= */
+
+.stats {
+    background: #0c1c2f;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat {
+    padding: 25px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 38px;
+    color: #00d9ff;
+}
+
+.stat span {
+    color: #a8bacb;
+}
+
+/* ================= OFFRES ================= */
+
+.offer {
+    background: #091522;
+}
+
+.offer-card {
+    background: #0d2034;
+    border: 1px solid #29445e;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.offer-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.offer-card .price {
+    color: #00d9ff;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.offer-card ul {
+    list-style: none;
+    color: #b8c8d7;
+}
+
+.offer-card li {
+    margin: 10px 0;
+}
+
+.offer-card li::before {
+    content: "✓ ";
+    color: #00d9ff;
+}
+
+/* ================= PORTFOLIO ================= */
+
+.project {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(135deg, #102c45, #0b1725);
+}
+
+.project h3 {
+    margin-bottom: 5px;
+}
+
+.project p {
+    color: #a9bac9;
+}
+
+/* ================= PROCESS ================= */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+}
+
+.number {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #00bfff;
+    color: #00131d;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.step p {
+    color: #9fb0c0;
+    margin-top: 8px;
+}
+
+/* ================= FAQ ================= */
+
+.faq {
+    background: #091522;
+}
+
+details {
+    background: #0d2034;
+    border: 1px solid #1e3a52;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 12px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    color: #aebecd;
+    margin-top: 12px;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, #06384b, #07111f);
+}
+
+.cta h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #b7c8d5;
+    margin-bottom: 25px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.contact-box {
+    background: #0d2034;
+    border: 1px solid #1d3b55;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.contact-box p {
+    color: #aebecd;
+    margin: 15px 0;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00d9ff;
+    font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #040b13;
+    padding: 35px 0;
+    text-align: center;
+    color: #8094a6;
+}
+
+footer strong {
+    color: #00d9ff;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #20c063;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    z-index: 2000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<a href="#accueil" class="logo">
+Vision<span>Digital</span>
+</a>
+
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#apropos">À propos</a>
+<a href="#offres">Offres</a>
+<a href="#portfolio">Projets</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="accueil">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="badge">
+AGENCE DIGITALE AFRICAINE
+</span>
+
+<h1>
+Transformez votre présence digitale en <span>opportunités.</span>
+</h1>
+
+<p>
+Vision Digital accompagne les entrepreneurs, PME et organisations dans la création de leur présence en ligne, leur marketing digital et l'intégration de solutions basées sur l'intelligence artificielle.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-primary">
+Démarrer un projet
+</a>
+
+<a href="https://wa.me/237640718528" target="_blank" class="btn btn-secondary">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dashboard">
+
+<div class="dashboard-top">
+
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
+</div>
+
+<h3>Vision Digital Dashboard</h3>
+
+<p style="color:#9fb0c0;">
+Votre croissance digitale commence ici.
+</p>
+
+<div class="chart">
+
+<div class="bar bar1"></div>
+<div class="bar bar2"></div>
+<div class="bar bar3"></div>
+<div class="bar bar4"></div>
+<div class="bar bar5"></div>
+<div class="bar bar6"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Nos solutions digitales</h2>
+
+<p>
+Des outils modernes pour développer votre activité.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">🌐</div>
+
+<h3>Création de sites web</h3>
+
+<p>
+Sites vitrines, sites professionnels et plateformes web modernes, rapides et adaptés aux mobiles.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📈</div>
+
+<h3>Marketing digital</h3>
+
+<p>
+Stratégie digitale, visibilité en ligne, campagnes publicitaires et acquisition de clients.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🤖</div>
+
+<h3>Intelligence artificielle</h3>
+
+<p>
+Solutions IA pour automatiser certaines tâches, améliorer la productivité et créer de nouvelles opportunités.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📱</div>
+
+<h3>Réseaux sociaux</h3>
+
+<p>
+Création de contenu et stratégies adaptées à Facebook, TikTok, Instagram et autres plateformes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">⚙️</div>
+
+<h3>Automatisation</h3>
+
+<p>
+Optimisation des processus répétitifs afin de gagner du temps et améliorer l'efficacité.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💡</div>
+
+<h3>Conseil digital</h3>
+
+<p>
+Nous vous aidons à transformer une idée ou une activité traditionnelle en véritable projet digital.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- A PROPOS -->
+
+<section id="apropos">
+
+<div class="container about-grid">
+
+<div class="about-text">
+
+<div class="section-title" style="text-align:left; margin-bottom:25px;">
+
+<h2>À propos de Vision Digital</h2>
+
+</div>
+
+<p>
+Vision Digital est une initiative orientée vers la transformation numérique des entrepreneurs et organisations africaines.
+</p>
+
+<p>
+Notre objectif est simple : rendre les technologies numériques plus accessibles et permettre aux entreprises de transformer leur visibilité en véritables opportunités commerciales.
+</p>
+
+<p>
+Nous combinons développement web, marketing digital, intelligence artificielle et stratégie pour construire des solutions adaptées aux réalités du marché africain.
+</p>
+
+</div>
+
+
+<div class="about-box">
+
+<h3>Notre vision</h3>
+
+<p>
+Construire une Afrique où chaque entrepreneur peut utiliser la technologie pour développer son activité.
+</p>
+
+<br>
+
+<h3>Notre mission</h3>
+
+<p>
+Créer des solutions digitales simples, modernes, accessibles et orientées vers les résultats.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>24/7</strong>
+<span>Disponibilité digitale</span>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<span>Solutions personnalisées</span>
+</div>
+
+<div class="stat">
+<strong>IA</strong>
+<span>Technologies modernes</span>
+</div>
+
+<div class="stat">
+<strong>237</strong>
+<span>Depuis le Cameroun</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OFFRES -->
+
+<section class="offer" id="offres">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Nos offres</h2>
+
+<p>
+Des solutions adaptées à différents niveaux de développement.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="offer-card">
+
+<h3>Starter</h3>
+
+<p>
+Pour les entrepreneurs qui souhaitent commencer leur présence digitale.
+</p>
+
+<div class="price">
+Sur devis
+</div>
+
+<ul>
+
+<li>Site web simple</li>
+<li>Design responsive</li>
+<li>Intégration WhatsApp</li>
+<li>Conseils de base</li>
+
+</ul>
+
+</div>
+
+
+<div class="offer-card">
+
+<h3>Business</h3>
+
+<p>
+Pour les entreprises qui souhaitent développer leur visibilité.
+</p>
+
+<div class="price">
+Sur devis
+</div>
+
+<ul>
+
+<li>Site professionnel</li>
+<li>Stratégie digitale</li>
+<li>Réseaux sociaux</li>
+<li>Optimisation de visibilité</li>
+
+</ul>
+
+</div>
+
+
+<div class="offer-card">
+
+<h3>Innovation</h3>
+
+<p>
+Pour les projets qui veulent intégrer l'automatisation et l'IA.
+</p>
+
+<div class="price">
+Sur devis
+</div>
+
+<ul>
+
+<li>Solutions IA</li>
+<li>Automatisation</li>
+<li>Plateformes personnalisées</li>
+<li>Accompagnement stratégique</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Nos projets</h2>
+
+<p>
+Quelques exemples de solutions que Vision Digital peut développer.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card project">
+
+<h3>Site entreprise</h3>
+
+<p>
+Présenter une entreprise et ses services sur internet.
+</p>
+
+</div>
+
+
+<div class="card project">
+
+<h3>Boutique en ligne</h3>
+
+<p>
+Permettre à une activité commerciale de vendre ses produits en ligne.
+</p>
+
+</div>
+
+
+<div class="card project">
+
+<h3>Plateforme digitale</h3>
+
+<p>
+Créer une solution web adaptée aux besoins spécifiques d'une organisation.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Comment travaillons-nous ?</h2>
+
+<p>
+Une méthode simple pour transformer votre idée en solution.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h3>Échange</h3>
+
+<p>
+Nous comprenons votre projet et vos objectifs.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h3>Stratégie</h3>
+
+<p>
+Nous définissons la meilleure solution digitale.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h3>Création</h3>
+
+<p>
+Nous concevons et développons votre solution.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">4</div>
+
+<h3>Lancement</h3>
+
+<p>
+Votre solution est mise en ligne et optimisée.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Questions fréquentes</h2>
+
+</div>
+
+
+<details>
+
+<summary>Combien coûte la création d'un site web ?</summary>
+
+<p>
+Le prix dépend du type de site, du nombre de fonctionnalités et des besoins du projet. Contactez-nous pour obtenir une proposition personnalisée.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Travaillez-vous avec des entreprises au Cameroun ?</summary>
+
+<p>
+Oui. Vision Digital est pensée pour accompagner les entrepreneurs, PME et organisations du marché camerounais et africain.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Est-il possible d'intégrer l'intelligence artificielle ?</summary>
+
+<p>
+Oui. Selon le projet, différentes solutions d'intelligence artificielle et d'automatisation peuvent être intégrées.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Comment vous contacter ?</summary>
+
+<p>
+Vous pouvez nous contacter directement sur WhatsApp au +237 640 718 528.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Votre projet mérite d'être digitalisé.
+</h2>
+
+<p>
+Parlons de votre idée et construisons ensemble votre prochaine opportunité.
+</p>
+
+<a href="https://wa.me/237640718528" target="_blank" class="btn btn-primary">
+Parler à Vision Digital
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Contact</h2>
+
+<p>
+Commençons votre projet.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-box">
+
+<h3>Vision Digital</h3>
+
+<p>
+Une idée ? Un projet ? Une entreprise à développer sur internet ?
+</p>
+
+<p>
+Écrivez-nous directement pour discuter de vos besoins.
+</p>
+
+<a href="https://wa.me/237640718528" target="_blank" class="contact-link">
+📱 WhatsApp : +237 640 718 528
+</a>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>Pourquoi nous contacter ?</h3>
+
+<p>✓ Création de site web</p>
+<p>✓ Marketing digital</p>
+<p>✓ Intelligence artificielle</p>
+<p>✓ Automatisation</p>
+<p>✓ Stratégie digitale</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<p>
+<strong>Vision Digital</strong>
+</p>
+
+<p>
+Transformez votre présence digitale en opportunités.
+</p>
+
+<p>
+© 2026 Vision Digital — Tous droits réservés.
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/237640718528"
+target="_blank"
+class="whatsapp"
+aria-label="Contacter Vision Digital sur WhatsApp">
+
+💬
+
+</a>
+
+
+</body>
+</html>
