@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vision Digital | Solutions digitales</title>
+
+    <meta name="description" content="Vision Digital accompagne les entrepreneurs et entreprises dans leur transformation digitale. Sites web, marketing digital, intelligence artificielle et automatisation.">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7, 17, 31, 0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #00d9ff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #d8e3ee;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #00d9ff;
+        }
+
+        .nav-button {
+            background: #00aaff;
+            padding: 10px 17px;
+            border-radius: 25px;
+            color: white !important;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 130px 0 70px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(0, 217, 255, 0.18),
+                    transparent 35%
+                ),
+                #07111f;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(0,217,255,0.3);
+            color: #00d9ff;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #00d9ff;
+        }
+
+        .hero p {
+            color: #aebdcc;
+            font-size: 17px;
+            max-width: 570px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 9px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(
+                135deg,
+                #00d9ff,
+                #0066ff
+            );
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.04);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           HERO CARD
+        ========================= */
+
+        .hero-card {
+            background: linear-gradient(
+                145deg,
+                #102840,
+                #091521
+            );
+
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+        }
+
+        .browser {
+            background: #0a1726;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .browser-top {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding-left: 15px;
+            background: #101f30;
+        }
+
+        .circle {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #53677a;
+        }
+
+        .screen {
+            padding: 30px 20px;
+        }
+
+        .screen-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .screen-title span {
+            color: #00d9ff;
+        }
+
+        .screen-line {
+            height: 10px;
+            width: 75%;
+            background: #20374e;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .screen-line.small {
+            width: 50%;
+        }
+
+        .screen-button {
+            display: inline-block;
+            margin-top: 20px;
+            background: #0066ff;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title span {
+            color: #00d9ff;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .section-title p {
+            color: #9eafc1;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.035);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(0,217,255,0.4);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: rgba(0,217,255,0.1);
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #9eafc1;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            line-height: 1.1;
+            margin: 12px 0 20px;
+        }
+
+        .about p {
+            color: #aebdcc;
+            margin-bottom: 20px;
+        }
+
+        .check {
+            margin: 12px 0;
+            color: #dce6ef;
+        }
+
+        .check span {
+            color: #00d9ff;
+            margin-right: 8px;
+        }
+
+        .about-visual {
+            min-height: 350px;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background:
+                radial-gradient(
+                    circle at 30% 30%,
+                    rgba(0,217,255,0.3),
+                    transparent 35%
+                ),
+                #0d1d2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 90px;
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 30px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .stat h3 {
+            font-size: 35px;
+            color: #00d9ff;
+        }
+
+        .stat p {
+            color: #9eafc1;
+        }
+
+
+        /* =========================
+           OFFRES
+        ========================= */
+
+        .offers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .offer {
+            padding: 30px;
+            border-radius: 20px;
+            background: #0c1b2c;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .offer.featured {
+            border-color: #00d9ff;
+        }
+
+        .offer h3 {
+            font-size: 24px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 18px 0;
+        }
+
+        .offer p {
+            color: #9eafc1;
+        }
+
+        .offer ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .offer li {
+            margin: 10px 0;
+            color: #c5d1dc;
+        }
+
+        .offer li::before {
+            content: "✓";
+            color: #00d9ff;
+            margin-right: 8px;
+        }
+
+
+        /* =========================
+           PORTFOLIO
+        ========================= */
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            min-height: 250px;
+            padding: 25px;
+            border-radius: 18px;
+            background: linear-gradient(
+                145deg,
+                #122a43,
+                #091521
+            );
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .project small {
+            color: #00d9ff;
+        }
+
+        .project p {
+            color: #9eafc1;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,217,255,0.1);
+            border: 1px solid rgba(0,217,255,0.3);
+            color: #00d9ff;
+            font-weight: bold;
+        }
+
+        .step p {
+            color: #9eafc1;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TESTIMONIALS
+        ========================= */
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .testimonial {
+            padding: 28px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .testimonial p {
+            color: #bdcbd8;
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+
+        .author {
+            color: #00d9ff;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        details {
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 12px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        details p {
+            color: #9eafc1;
+            margin-top: 12px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            text-align: center;
+            padding: 70px 25px;
+            border-radius: 25px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,217,255,0.12),
+                    rgba(0,102,255,0.12)
+                );
+            border: 1px solid rgba(0,217,255,0.2);
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #aebdcc;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            margin: 10px 0 20px;
+        }
+
+        .contact-info p {
+            color: #9eafc1;
+        }
+
+        .contact-item {
+            margin-top: 20px;
+        }
+
+        .contact-item span {
+            color: #9eafc1;
+        }
+
+        form {
+            padding: 30px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: #091725;
+            color: white;
+            outline: none;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #00d9ff;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 50px 0 25px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 35px;
+        }
+
+        footer p {
+            color: #8495a8;
+            font-size: 14px;
+        }
+
+        footer h4 {
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            color: #9eafc1;
+            font-size: 14px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            color: #657689;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+            z-index: 2000;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid,
+            .about,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .services,
+            .offers,
+            .portfolio,
+            .testimonials {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding-top: 110px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .section-title h2,
+            .about h2,
+            .contact h2,
+            .cta h2 {
+                font-size: 31px;
+            }
+
+            .services,
+            .offers,
+            .portfolio,
+            .testimonials,
+            .stats,
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-card {
+                margin-top: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="container">
+
+            <nav>
+
+                <a href="#accueil" class="logo">
+                    Vision<span>Digital</span>
+                </a>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#apropos">À propos</a>
+                    </li>
+
+                    <li>
+                        <a href="#offres">Offres</a>
+                    </li>
+
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="nav-button">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="accueil">
+
+        <div class="container">
+
+            <div class="hero-grid">
+
+                <div>
+
+                    <div class="badge">
+                        🚀 Agence digitale nouvelle génération
+                    </div>
+
+                    <h1>
+                        Votre vision.<br>
+                        Notre <span>technologie.</span><br>
+                        Votre croissance.
+                    </h1>
+
+                    <p>
+                        Vision Digital accompagne les entrepreneurs,
+                        PME et organisations dans leur transformation
+                        digitale grâce au web, au marketing,
+                        à l'intelligence artificielle et à l'automatisation.
+                    </p>
+
+                    <div class="buttons">
+
+                        <a
+                            href="https://wa.me/237640718528"
+                            target="_blank"
+                            class="btn btn-primary">
+
+                            💬 Parler sur WhatsApp
+
+                        </a>
+
+                        <a
+                            
